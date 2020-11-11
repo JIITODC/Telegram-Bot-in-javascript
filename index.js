@@ -4,12 +4,6 @@ require('dotenv').config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-// middleware (works when either tagged in a group or sent in a PM to the bot)
-// bot.use((ctx, next) => {
-//     console.log(ctx.chat);
-//     next();
-// });
-
 bot.start((ctx) => ctx.reply("Hello, I'm the JODC bot written in JS."));
 
 // load commands from 'commands' directory
